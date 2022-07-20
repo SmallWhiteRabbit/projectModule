@@ -1,0 +1,10 @@
+commitlint.config.js
+.eslintcache
+.stylelintcache
+jest.config.js
+/node_modules/*
+/scripts/*
+/src/assets/*
+/dist/* 
+/src/**/*.d.ts
+/src/Router/**/**/*.ts

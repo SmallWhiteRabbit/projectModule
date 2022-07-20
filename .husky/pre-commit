@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 清除react的影响
+#pnpm run postinstall
+# 校验lint
+#npx lint-staged
+# 执行测试用例，目前不要求测试覆盖，但是有测试不通过的不给提交，不能影响已经发布的功能
+#pnpm test

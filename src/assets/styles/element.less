@@ -1,0 +1,188 @@
+/* 搜索模块 */
+.filter {
+  margin-bottom: @spacing12;
+
+  .filter-form {
+    .ant-form-item {
+      margin-right: @searchItemMargin;
+      margin-bottom: @spacing12;
+
+      .filter-form_select,
+      .filter-form_input {
+        width: @searchItemW;
+      }
+    }
+  }
+
+  .filter-btn_reset {
+    padding: 0;
+  }
+}
+
+// table中按钮样式
+.btn_text(@color:'') {
+  padding: 0 @tableBtnPadding;
+  color: @color;
+
+  &:hover {
+    color: lighten(@color, 20%);
+  }
+}
+// btn-module按钮样式
+.btn(@color:'') {
+  color: @searchBtnColor;
+  background-color: @color;
+  border-color: @color;
+
+  &:focus,
+  &:hover {
+    color: @searchBtnColor;
+    background-color: fadeout(@color, 20%);
+    border-color: fadeout(@color, 20%);
+  }
+}
+
+/* table 模块 */
+
+.my-table.ant-table-wrapper {
+  .table-striped td {
+    background-color: #fafafa;
+  }
+
+  .ant-table.ant-table-small {
+    .ant-table-thead > tr > th {
+      color: var(--font-gy3);
+      background-color: var(--white-1);
+    }
+
+    .ant-table-cell {
+      padding: @spacing10 @spacing32 @spacing10 @spacing24;
+    }
+
+    .my-table-options {
+      white-space: nowrap;
+    }
+  }
+
+  td.ant-table-cell {
+    border-right: 1px solid #f0f0f0;
+  }
+  // table中的分页
+  .ant-pagination {
+    margin: @spacing16 0;
+  }
+
+  .ant-spin-nested-loading {
+    height: 100%;
+
+    .ant-spin-container {
+      height: 100%;
+
+      .ant-table {
+        height: calc(100% - 64px);
+      }
+    }
+  }
+
+  //表格滚动条
+  .ant-table-body {
+    overflow: scroll !important;
+  }
+
+  .my-table-options {
+    // 按钮
+    .ant-btn {
+      height: auto;
+      margin: 0 24px 0 0;
+      padding: 0;
+      color: var(--primary-color);
+
+      &:last-of-type {
+        margin: 0;
+      }
+
+      &:hover {
+        color: var(--blue3);
+        background-color: transparent;
+
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .ant-badge {
+      margin-left: 24px;
+      line-height: 24px;
+    }
+  }
+}
+
+.my-drawer.ant-drawer-right {
+  .form-title {
+    color: @formTitleColor;
+    text-align: right;
+  }
+}
+
+// 批量添加样式
+.form-add-batch {
+  .add-batch-container {
+    margin-top: @addbatchBoderMarginTop;
+    padding: 0 10px;
+    border: 1px solid @addbatchBoderColor;
+    border-radius: @addbatchBoderRadius;
+
+    &.noDel {
+      padding: 18px 10px 0;
+    }
+
+    .del {
+      margin: 10px 0;
+      color: @addbatchDelColor;
+      text-align: right;
+    }
+  }
+
+  .form-title {
+    margin: 10px 0;
+  }
+}
+
+.btn-module {
+  .ant-btn {
+    min-width: auto;
+    margin-right: @searchBtnMargin;
+
+    + .ant-btn {
+      margin-right: @searchBtnMargin;
+      margin-left: 0;
+    }
+
+    &.add {
+      .btn(@searchBtnAdd);
+    }
+
+    &.download {
+      .btn(@searchBtnDownload);
+    }
+
+    &.import {
+      .btn(@searchBtnImport);
+    }
+  }
+}
+
+.my-drawer-form {
+  .ant-btn {
+    margin-right: @searchBtnMargin;
+
+    &.download {
+      .btn(@searchBtnDownload);
+    }
+
+    &.import {
+      .btn(@searchBtnImport);
+    }
+  }
+}

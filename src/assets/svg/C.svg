@@ -1,0 +1,23 @@
+<svg  width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffb100;
+      }
+
+      .cls-2, .cls-3 {
+        font-size: 80px;
+      }
+
+      .cls-3 {
+        fill: #fdfdfe;
+        text-anchor: middle;
+        font-family: "Adobe Heiti Std";
+      }
+    </style>
+  </defs>
+  <g>
+    <rect width="100" height="100" class="cls-1" style="fill: #ffb100;"/>
+    <text x="49" y="80" class="cls-2"><tspan class="cls-3" style="fill: #fdfdfe;">C</tspan></text>
+  </g>
+</svg>
