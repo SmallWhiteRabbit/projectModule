@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import { getSlot } from '@/utils/props'
+import { getSlot } from '@/utils/utils'
 
 export default defineComponent({
   name: 'MyModal',

@@ -2,7 +2,7 @@ import type { PropType } from 'vue'
 import { defineComponent, onMounted } from 'vue'
 import { useLocale, deepClone } from 'youibot-plus'
 import selectAdd from './select/select-add.vue'
-import { getSlot } from '@/utils/props'
+import { getSlot } from '@/utils/utils'
 import { useForm } from '@/hooks/use-form/index'
 export default defineComponent({
   name: 'MyForm',

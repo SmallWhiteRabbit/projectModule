@@ -1,5 +1,5 @@
 import { inputPassword } from '@/config/form'
-import { checkPassWord } from '@/utils/Form'
+import { checkPassWord } from '@/utils/utils'
 
 export default {
   formData: {

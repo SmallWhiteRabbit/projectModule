@@ -45,15 +45,15 @@ export default defineComponent({
     const state = reactive({
       formListItem,
       formData,
-      handleSuccess: () => {} //调取form中表单校验
+      handleSuccess: (): void => {} //调取form中表单校验
     })
-    const handleSubmit = () => {
+    const handleSubmit = (): void => {
       login(state.formData).then(() => {
         isLoginAutoLocalData(JSON.stringify(isLoginAuto.value))
         store.dispatch('SET_ROUTERS')
       })
     }
-    const validForm = (s: () => {}) => {
+    const validForm = (s: () => void): void => {
       state.handleSuccess = s
     }
     const bgImage = ref(

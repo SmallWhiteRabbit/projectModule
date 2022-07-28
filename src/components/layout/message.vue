@@ -24,8 +24,8 @@ export default defineComponent({
   name: 'MyMessage',
   components: { MessageOutlined },
   setup() {
-    let count = 5
-    let list = ref([
+    const count = 5
+    const list = ref([
       { msg: '【提醒】这是一条消息这是一条消息这是一条 消息这是一条消息这是...' },
       { msg: '【提醒】这是一条消息这是一条消息这是一条 消息这是一条消息这是...' },
       { msg: '【提醒】这是一条消息这是一条消息这是一条 消息这是一条消息这是...' }

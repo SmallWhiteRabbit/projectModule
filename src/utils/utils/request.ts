@@ -1,8 +1,8 @@
 import type { AxiosRequestConfig, AxiosPromise } from 'axios'
 import axios from 'axios'
-import { $msg } from '@/utils/message'
+import { $msg } from '@/utils/utils/message'
 
-import { toNext } from '@/Router'
+import { toLogin } from '@/Router'
 
 const baseURL = '//' + window.config.url
 
@@ -31,7 +31,7 @@ requestBase.interceptors.response.use(
 
     if (code !== 200) {
       if (code === 401) {
-        toNext({ path: '/login' })
+        toLogin()
       }
       $msg.error({ message: msg })
       return Promise.reject(response)

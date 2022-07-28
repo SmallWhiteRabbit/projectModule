@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
-import { getPassWordSameFn } from '@/utils/Form'
+import { getPassWordSameFn } from '@/utils/utils'
 import { updatePwd } from '@/utils/api/system/user'
 import { toNext } from '@/Router'
 import FormConfig from '@/config/form/layout/update-password'

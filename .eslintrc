@@ -27,6 +27,8 @@
     {
       "files": ["*.ts", "*.tsx", "*.vue"],
       "extends": ["@vue/typescript/recommended", "prettier", "@vue/prettier/@typescript-eslint"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"],
       "parserOptions": {
         "project": "./tsconfig.json",
         "ecmaFeatures": {
@@ -46,8 +48,7 @@
           }
         }
       },
-      "parser": "@typescript-eslint/parser",
-      "plugins": ["@typescript-eslint"],
+
       "rules": {
         "multiline-comment-style": ["error", "starred-block"],
         "line-comment-position": ["warn", { "position": "above" }],
@@ -80,7 +81,7 @@
         "import/no-named-as-default": 0, // 导入需要将default as 名称
         "@typescript-eslint/no-explicit-any": 2, //禁止使用any类型
         "no-console": "off",
-        "@typescript-eslint/no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }]
+        "@typescript-eslint/no-unsafe-return": "off" // 禁止函数返回any
       }
     }
   ],
@@ -153,7 +154,7 @@
     "operator-assignment": [0, "always"], //赋值运算符 += -=什么的
     "operator-linebreak": [2, "after"], //换行时运算符在行尾还是行首
     "padded-blocks": 0, //块语句内行首行尾是否要空行
-    "prefer-const": 0, //首选const
+    "prefer-const": 2, //首选const
     "prefer-spread": 0, //首选展开运算
     "prefer-reflect": 0, //首选Reflect的方法
     "quotes": [1, "single"], //引号类型 `` "" ''
@@ -189,7 +190,7 @@
     "no-console": [0, { "allow": ["warn", "error"] }],
     "object-shorthand": 2,
     "no-unused-vars": [2, { "vars": "all", "args": "after-used" }], //不能有声明后未被使用的变量或参数
-    "no-undef": 0,
+    "no-undef": 2,
     "camelcase": "off",
     "no-extra-boolean-cast": "off",
     // "semi": ["error", "always"],

@@ -40,7 +40,7 @@ export default defineComponent({
         path: 2
       }
     ])
-    let isDrawer = ref(false)
+    const isDrawer = ref(false)
     const isFormShow = () => {
       isDrawer.value = !isDrawer.value
     }

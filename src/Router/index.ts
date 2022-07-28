@@ -92,6 +92,10 @@ export function getParams(type: string) {
   return $route.params[type]
 }
 
+export function toLogin(): void {
+  router.push({ path: '/login' })
+}
+
 /**
  * @param routers
  */

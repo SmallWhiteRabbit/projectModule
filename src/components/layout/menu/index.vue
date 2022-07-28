@@ -23,10 +23,10 @@ export default defineComponent({
   },
   setup() {
     const route = useRoute()
-    let selectedKeys = ref([route.fullPath])
-    let matched = route.matched
-    let matchedLen = matched.length
-    let openKeys = ref<string[]>([])
+    const selectedKeys = ref([route.fullPath])
+    const matched = route.matched
+    const matchedLen = matched.length
+    const openKeys = ref<string[]>([])
 
     if (matchedLen > 2) {
       openKeys.value = [matched[matchedLen - 2].path]

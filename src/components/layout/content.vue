@@ -21,7 +21,7 @@ export default defineComponent({
   setup() {
     const { t } = useLocale()
     const route = useRoute()
-    let breadcrumbList = ref<RouteLocationMatched[]>([])
+    const breadcrumbList = ref<RouteLocationMatched[]>([])
 
     watchEffect(() => {
       breadcrumbList.value = route.matched.slice(1)

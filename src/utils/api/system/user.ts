@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import { request } from '@/utils/utils/index'
 import type { AxiosPromise } from 'axios'
 /**
  * 列表

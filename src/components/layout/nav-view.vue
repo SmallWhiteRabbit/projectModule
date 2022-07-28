@@ -50,7 +50,7 @@ export default defineComponent({
       })
     )
 
-    let menuList = ref<RouterType[]>([])
+    const menuList = ref<RouterType[]>([])
 
     watchEffect(() => {
       const curRouter = getRoute().path
@@ -58,7 +58,7 @@ export default defineComponent({
       if (curRouter !== '/') {
         allMenu.value.forEach((menu: RouterType) => {
           const curPath = getRoute().path.split('/')[1]
-          let menuPath = menu.path.split('/')[1]
+          const menuPath = menu.path.split('/')[1]
 
           if (menuPath === curPath && menu.children) {
             menuList.value = menu.children
@@ -79,7 +79,7 @@ export default defineComponent({
     }
     const judgeIsCur = (menu: RouterType) => {
       const curPath = getRoute().path.split('/')[1]
-      let menuPath = menu.path.split('/')[1]
+      const menuPath = menu.path.split('/')[1]
 
       return menuPath === curPath
     }

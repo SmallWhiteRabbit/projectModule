@@ -3,7 +3,7 @@ import type { PropType, VNode } from 'vue'
 import { defineComponent, onMounted, ref } from 'vue'
 import { deepClone, useLocale } from 'youibot-plus'
 import { EllipsisOutlined, RightOutlined } from '@ant-design/icons-vue'
-import { getSlot } from '@/utils/props'
+import { getSlot } from '@/utils/utils'
 interface ISlotType {
   [key: string]: object
 }

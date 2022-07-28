@@ -16,7 +16,7 @@ export default defineComponent({
     },
     filterData: {
       type: Object,
-      default: () => {}
+      default: (): void => {}
     }
   },
 
